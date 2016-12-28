@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  mongo:
+    build: ./mongo
+  tomcat:
+    build: ./tomcat
+  data:
+    build: ./alpine-mini
