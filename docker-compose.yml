@@ -1,12 +1,10 @@
 mongo:
   build: ./mongo
-  ports:
-    - "27017:27017"
-jdk:
-  build: ./jdk
+  volumes:
+    - ./data/db:/data/db
 app:
   build: ./app
-  links: 
+  links:
     - mongo
   ports:
-    - "8080:8080"
+    - "80:8080"

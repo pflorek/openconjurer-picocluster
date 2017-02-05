@@ -1,4 +1,4 @@
-FROM jdk
+FROM aarch64/openjdk:8-jdk
 
 COPY service-monolith-1.0-SNAPSHOT.jar /opt/service-monolith-1.0-SNAPSHOT.jar
 

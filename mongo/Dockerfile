@@ -1,8 +1,8 @@
-FROM ioft/armhf-debian
+FROM aarch64/ubuntu:16.04
 
-RUN apt-get install -y mongodb-server
+RUN apt-get update
+RUN apt-get install mongodb-server
 
 EXPOSE 27017
 
-# Start MongoDB.
-CMD service mongod start
+CMD mongod
