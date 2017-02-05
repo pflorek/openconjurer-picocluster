@@ -1,9 +1,12 @@
-version: '2'
-
-services:
-  mongo:
-    build: ./mongo
-  tomcat:
-    build: ./tomcat
-  data:
-    build: ./alpine-mini
+mongo:
+  build: ./mongo
+  ports:
+    - "27017:27017"
+jdk:
+  build: ./jdk
+app:
+  build: ./app
+  links: 
+    - mongo
+  ports:
+    - "8080:8080"

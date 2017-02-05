@@ -1,3 +1,5 @@
-FROM resin/rpi-raspbian:jessie
+FROM ioft/armhf-debian
 
-RUN apt-get install openjdk-8-jdk
+RUN apt-get install openjdk-8-jre
+
+CMD ["/bin/sh"]
